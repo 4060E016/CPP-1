@@ -147,7 +147,9 @@ struct chunk {
 
 
 ### Exploiting the heap
+
 >* https://www.win.tue.nl/~aeb/linux/hh/hh-11.html
+
 heapbug.c
 ```
 #include <stdio.h>
@@ -168,8 +170,15 @@ int main(int argc, char **argv) {
 ```
 
 ```
-
+% ./heapbug `perl -e 'print "A"x5000'`
+Segmentation fault
 ```
+
+We would like to spawn a shell from this buggy program
+
+ltrace ./heapbug `perl -e 'print "A"x2368'`
+
+ltrace ./heapbug `perl -e 'print "A"x2367'`
 
 ### Memory Layout of C Programs
 
@@ -241,6 +250,10 @@ int main(void)
 }
 
 ```
+```
+text       data        bss        dec        hex    filename
+960         252         12       1224        4c8    memory-layout
+```
 
 ##### DEMO5:
 
@@ -255,6 +268,11 @@ int main(void)
     return 0;
 }
 
+```
+
+```
+text       data        bss        dec        hex    filename
+960         256          8       1224        4c8    memory-layout
 ```
 
 ```
