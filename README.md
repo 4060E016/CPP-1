@@ -60,6 +60,10 @@ int main(void)
 }
 
 ```
+# Buffer overflow
+
+>* https://www.win.tue.nl/~aeb/linux/hh/hh-10.html
+>* https://www.win.tue.nl/~aeb/linux/hh/phrack/P49-14
 
 
 # heap vs stack
