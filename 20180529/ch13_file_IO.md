@@ -251,3 +251,41 @@ int main()
 } 
 
 ```
+# C++ 讀寫 CSV檔
+
+>* http://cckuo0925.blogspot.com/2016/08/c-csv.html
+
+```
+#include <iostream>
+#include <string> 
+#include <fstream>
+#include <sstream>
+
+int main()
+{
+  vector<double> matrix;
+  //readfile
+  fstream file;
+  file.open("read.csv");
+  string line
+  while (getline( file, line,'\n'))  //讀檔讀到跳行字元
+	{
+	  istringstream templine(line); // string 轉換成 stream
+	  string data;
+	  while (getline( templine, data,',')) //讀檔讀到逗號
+	  {
+	    matrix.push_back(atof(data.c_str()));  //string 轉換成數字
+	  }
+	}
+  file.close();
+  
+  //writefile
+  file.open("write.csv");
+  for (int i=0;i<matrix.size();i++)
+  {
+    file << matrix[i]<<",";
+  }
+  file.close();
+  return 0;
+}
+```
