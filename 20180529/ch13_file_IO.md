@@ -11,6 +11,9 @@
 13.4 getline(),get(),put()
 ```
 
+>* https://read01.com/zh-tw/6nPeN.html#.WxYnHkiFOUk
+>* https://openhome.cc/Gossip/CppGossip/UnFormatFileIO.html
+
 ## NEXT
 ```
 本課程主要教一般文字檔案的讀寫
