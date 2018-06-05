@@ -42,8 +42,9 @@ int main()
 {
   ofstream output;
 
-  // Create a file
-  output.open("scores.txt");
+ // Create a file
+  output.open("d:///scores.txt");
+  //output.open("scores.txt");
 
   // Write two lines
   output << "John" << " " << "T" << " " << "Smith" 
