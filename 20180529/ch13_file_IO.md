@@ -51,7 +51,9 @@ int main()
     << " " << 90 << endl;
   output << "Eric" << " " << "K" << " " << "Jones" 
     << " " << 85 << endl;
-
+  output << "天王" << " " << "G" << " " << "大大" 
+    << " " << 95 << endl;
+    
   output.close();
 
   cout << "Done" << endl;
