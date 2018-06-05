@@ -46,7 +46,7 @@ int main()
   output.open("d:///scores.txt");
   //output.open("scores.txt");
 
-  // Write two lines
+  // Write lines
   output << "John" << " " << "T" << " " << "Smith" 
     << " " << 90 << endl;
   output << "Eric" << " " << "K" << " " << "Jones" 
