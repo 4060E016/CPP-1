@@ -66,6 +66,13 @@ int main()
 ```
 
 ### 13.2.2從檔案裡讀出資料
+
+d:///scores33.txt
+```
+John T Smith 90
+Eric K Jones 85
+天王 G 大大 95
+```
 ```
 #include <iostream>
 #include <fstream>
@@ -74,17 +81,22 @@ using namespace std;
 
 int main()
 {
-  ifstream input("scores.txt");
+  ifstream input("d:///scores33.txt");
 
   // Read data
   string firstName;
   char mi;
   string lastName;
   int score;
+  
   input >> firstName >> mi >> lastName >> score;
   cout << firstName << " " << mi << " " << lastName << " "
     << score << endl;
 
+  input >> firstName >> mi >> lastName >> score;
+  cout << firstName << " " << mi << " " << lastName << " "
+    << score << endl;
+    
   input >> firstName >> mi >> lastName >> score;
   cout << firstName << " " << mi << " " << lastName << " "
     << score << endl;
@@ -95,7 +107,6 @@ int main()
 
   return 0;
 }
-
 ```
 
 ### 13.2.3 檢查檔案是否存在==>使用fail()
